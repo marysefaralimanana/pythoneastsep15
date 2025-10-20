@@ -45,7 +45,17 @@ def calculate_bmi(weight_kg, height_m):
     #     return None # Or raise ValueError("Height cannot be zero or negative.")
     # bmi = weight_kg / (height_m ** 2)
     # return bmi
-    pass # Remove this line when you start implementing
+    if(height_m <= 0):
+            print("your height must be a valid number")
+            return None
+    else :
+            bmi= weight_kg/height_m**2
+            print("BMI for ",weight_kg,"kg,",height_m,"m:", bmi)
+            return bmi
+
+weight_kg, height_m = input("Enter two numbers separated by space: ").split()
+weight_kg, height_m = int(weight_kg), int(height_m)
+calculate_bmi(weight_kg,height_m)
 
 # --------------------------------------------------------------------------
 # You can add example usage here to test your function manually (optional)
