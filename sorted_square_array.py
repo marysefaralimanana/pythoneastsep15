@@ -13,10 +13,12 @@ Example with negative numbers:
 array = [-2, -1, 0, 1, 2]
 Expected Output: [0, 1, 1, 4, 4]
 """
-
+# Write your code here.
 def sortedSquaredArray(array):
-    # Write your code here.
-    pass
+    array_square=[]
+    for i in range(len(array)):
+       array_square.append(array[i]**2)
+    return array_square
 
 if __name__ == '__main__':
     # Test cases (you can add more here to test your solution)

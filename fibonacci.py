@@ -17,7 +17,9 @@ def calculate_fibonacci(n):
     else:
         return calculate_fibonacci(n+2) - calculate_fibonacci(n+1)
 
-number=int(input("Give a number :"))
-print("the fibonacci of", number, "is ", calculate_fibonacci(number))
-    # For now, let's provide a placeholder that will fail the test.
 
+print("the fibonacci of 5 is ", calculate_fibonacci(5))
+print("the fibonacci of 10 is ", calculate_fibonacci(10))
+print("the fibonacci of -4 is ", calculate_fibonacci(-4))
+print("the fibonacci of -1 is ", calculate_fibonacci(-1))
+print("the fibonacci of 2 is ", calculate_fibonacci(2))

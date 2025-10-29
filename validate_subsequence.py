@@ -21,10 +21,24 @@ sequence = [1, 6, 10, -1]
 Expected Output: False (because -1 comes before 10 in the sequence, but after in the array)
 """
 
-
 def isValidSubsequence(array, sequence):
+    if(len(sequence))==1:
+        if sequence[0] in array:
+            return True
+        else:
+            return False
+    else:
     # Write your code here.
-    pass
+        for i in range(len(sequence)-1):
+            if (sequence[i] not in array or sequence[i+1] not in array):
+                return False    
+            else:    
+                if (array.index(sequence[i]) > array.index(sequence[i+1])):
+                    return False
+               
+    return True
+    
+           
 
 if __name__ == '__main__':
     # Test cases (you can add more here to test your solution)
@@ -33,3 +47,4 @@ if __name__ == '__main__':
     print(f"Test 3: array=[1, 2, 3, 4], sequence=[1, 3, 4] -> {isValidSubsequence([1, 2, 3, 4], [1, 3, 4])}")
     print(f"Test 4: array=[1, 2, 3, 4], sequence=[2, 4] -> {isValidSubsequence([1, 2, 3, 4], [2, 4])}")
     print(f"Test 5: array=[1, 2, 3, 4], sequence=[5] -> {isValidSubsequence([1, 2, 3, 4], [5])}")
+    print(f"Test 5: array=[1], sequence=[1,2] -> {isValidSubsequence([1], [1,2])}")

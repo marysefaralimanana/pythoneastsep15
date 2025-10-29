@@ -16,11 +16,22 @@ Expected Output: [-1, 11] (the order of the numbers doesn't matter)
 
 def twoNumberSum(array, targetSum):
     # Write your code here.
-    pass
-
+    two_sumarray=[]
+    for i in range(len(array)-1):
+        sumarray=[]
+        for j in range(i + 1, len(array)):
+            sumtwonumber = array[i]+array[j]
+            if(sumtwonumber == targetSum):
+                sumarray.append(array[i])
+                sumarray.append(array[j])
+                #print(array[i],",",array[j])
+                two_sumarray=sumarray
+    return two_sumarray
+        
+                
 if __name__ == '__main__':
     # Test cases (you can add more here to test your solution)
-    print(f"Test 1: [1, 3, 4, 5], targetSum=7 -> {twoNumberSum([1, 3, 4, 5], 7)}")
+    print(f"Test 1: [1, 5, 4, 5], targetSum=7 -> {twoNumberSum([1, 5, 4, 3], 7)}")
     print(f"Test 2: [3, 5, -4, 8, 11, 1, -1, 6], targetSum=10 -> {twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10)}")
     print(f"Test 3: [4, 6], targetSum=10 -> {twoNumberSum([4, 6], 10)}")
     print(f"Test 4: [4, 6, 1], targetSum=5 -> {twoNumberSum([4, 6, 1], 5)}")

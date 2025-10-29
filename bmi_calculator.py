@@ -27,8 +27,8 @@ Good luck!
 # DO NOT CHANGE the function signature (name and parameters).
 # --------------------------------------------------------------------------
 
-def calculate_bmi(weight_kg, height_m):
-    """
+
+"""
     Calculates the Body Mass Index (BMI).
 
     Args:
@@ -45,22 +45,17 @@ def calculate_bmi(weight_kg, height_m):
     #     return None # Or raise ValueError("Height cannot be zero or negative.")
     # bmi = weight_kg / (height_m ** 2)
     # return bmi
-    if(height_m <= 0):
-            print("your height must be a valid number")
+def calculate_bmi(weight_kg, height_m):
+        if(height_m <= 0):
             return None
-    else :
+        else :
             bmi= weight_kg/height_m**2
-            print("BMI for ",weight_kg,"kg,",height_m,"m:", bmi)
             return bmi
-
-weight_kg, height_m = input("Enter two numbers separated by space: ").split()
-weight_kg, height_m = int(weight_kg), int(height_m)
-calculate_bmi(weight_kg,height_m)
 
 # --------------------------------------------------------------------------
 # You can add example usage here to test your function manually (optional)
-# if __name__ == "__main__":
-#     print("BMI for 70kg, 1.75m:", calculate_bmi(70, 1.75))
-#     print("BMI for 0kg, 1.75m:", calculate_bmi(0, 1.75))
-#     print("BMI for 70kg, 0m:", calculate_bmi(70, 0))
+if __name__ == "__main__":
+     print("BMI for 70kg, 1.75m:", calculate_bmi(70, 1.75))
+     print("BMI for 0kg, 1.75m:", calculate_bmi(0, 1.75))
+     print("BMI for 70kg, 0m:", calculate_bmi(70, 0))
 # --------------------------------------------------------------------------
